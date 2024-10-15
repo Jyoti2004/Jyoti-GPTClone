@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 62.5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: rgb(3, 0, 31);
+  font-family: 'Poppins','san-serif';
+  color:white
 }
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.sideBar {
+  flex: 2.5;
+  border-right: 2px solid rgb(100, 100, 100); /* Change this to border-right to separate from mainbar */
+/* padding-right: 1rem; Optional: Add space to align better */
+}
+
+.mainbar {
+  flex: 7; /* Adjusted for better proportion */
+  padding-left: 1rem; /* Optional: Add padding to avoid the content touching the border */
+}
+
+
+.upperSideTop {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 1rem; /* Add space between logo and text */
+  padding: 1rem; /* Add padding around for better spacing */
+  margin-bottom: 2.5 rem;
+}
+
+/* Limit icon sizes to avoid overflow */
+.logo {
+  width: 30px; /* Adjusted to make the logo smaller */
+  height: 30px;
+  object-fit: contain; 
+}
+
+.addBtn {
+  width: 25 px; /* Ensure the New Chat icon is smaller */
+  height: 2rem;
+  padding-right: 1rem;
+  margin-right: 0.8rem; /* Add space between icon and text */ 
+}
+
+.query>img {
+  width: 18px; /* Reduce size of query message icons */
+  height: 18px;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+
+.listitemsImg {
+  width: 24px; /* Ensure sidebar icons are compact */
+  height: 24px;
+  margin-right: 1rem;
+}
+
+
+.brand {
+  font-size: 2rem; /* Increase text size for 'Jyoti GPT' */
+  font-weight: 600; /* Make the text bold */
+}
+.upperSide{
+  padding: 2.5 rem;
+  border-bottom: 1px solid rgb(100,100,100);
+  height: 70%;
+}
+
+.sideBar, .mainbar {
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.upperSide, .lowerSide {
+  overflow: hidden; /* Ensure no overflow within these sections */
+}
+
+
+.midBtn {
+  width: 20rem; /* Reduce button width to fit better */
+  padding: 1.4rem; /* Adjust padding for smaller size */
   color: white;
+  background-color: #5A4BFF;
+  border:none;
+  font-size: 1.7rem; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  border-radius: 0.5 rem;
 }
 
-.App-link {
-  color: #61dafb;
+.upperSideBottom button {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between image and text */
+  border: 2px solid white; /* Border around the button */
+  border-radius: 2rem; /* Rounded corners */
+  padding: 1rem 2rem; /* Padding inside the button */
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 80%; /* Optional: Full width button */
+  margin-bottom: 1rem; /* Space between buttons */
+  transition: background-color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.upperSideBottom button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+}
+
+.upperSideBottom img {
+  width: 24px; /* Adjust the size of the image */
+  height: 24px;
+  object-fit: contain; /* Ensure the aspect ratio is maintained */
+}
+
+.query{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: rgba(222,222,222,1);
+  padding: 1.5rem;
+  width: 25rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(98,98,98,1);
+}
+
+.lowerSide{
+  padding: 2rem;
+}
+.listitems{
+  margin: 0.8rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.listitemsImg{
+  margin: 1rem;
+  padding-right: 1rem;
+}
+.listitems:nth-child(1)>.listitemsImg{
+  margin-right: 0.6rem;
+}
+
+.listitems:nth-child(3)>.listitemsImg{
+  margin-right: 0.75rem;
 }
